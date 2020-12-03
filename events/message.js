@@ -5,8 +5,6 @@
 module.exports = (client, message) => {
 
     const botzChannel = client.guilds.cache.find(g => g.id == client.config.guild).channels.cache.find(c => c.id == client.config.channels.botz);
-    const bumpRoleID = client.guilds.cache.find(g => g.id == client.config.guild).roles.cache.find(r => r.id == client.config.roles.bump).id;
-
     if (message.content.startsWith(client.config.prefix) && !message.author.bot) {
         /* 
             Commands
@@ -36,7 +34,7 @@ module.exports = (client, message) => {
             .catch(err => console.error(err));
 
         setTimeout(m => {
-            botzChannel.send("Il est l'heure de bumpé `d!bump` ! <@" + bumpRoleID + ">");
+            botzChannel.send("Il est l'heure de bumpé `d!bump` ! <@#783029032508850207>");
         }, time*60*1000, message);    
     } else if (message.content.indexOf('https://discord.gg/') >= 0 && !(message.member.hasPermission("ADMINISTRATOR")) && !message.author.bot) {            
         /*
