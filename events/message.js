@@ -34,7 +34,7 @@ module.exports = (client, message) => {
             .catch(err => console.error(err));
 
         setTimeout(m => {
-            botzChannel.send("Il est l'heure de bumpé `d!bump` ! <@#783029032508850207>");
+            botzChannel.send("Il est l'heure de bumpé `!d bump` ! <@#783029032508850207>");
         }, time*60*1000, message);    
     } else if (message.content.indexOf('https://discord.gg/') >= 0 && !(message.member.hasPermission("ADMINISTRATOR")) && !message.author.bot) {            
         /*
